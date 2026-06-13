@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Bo we mnie jest seks — animated</title>
-<meta name="description" content="A retro-cabaret animation of Jeremi Przybora's song 'Bo we mnie jest seks', with an English translation. Click to reveal the soul beneath the sex.">
+<meta name="description" content="A retro-cabaret animation of Jeremi Przybora's song 'Bo we mnie jest seks', with the original recording and a singable English translation that syncs to the music.">
 <meta property="og:title" content="Bo we mnie jest seks — an animated cabaret">
-<meta property="og:description" content="Jeremi Przybora's classic, turned into a little animated stage with an English translation. Tap 'reveal the soul'.">
+<meta property="og:description" content="Jeremi Przybora's classic, turned into a little animated stage with the original audio and a singable English translation. Press play and tap 'reveal the soul'.">
 <meta property="og:type" content="website">
 <meta name="theme-color" content="#120308">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,18 +17,19 @@ html,body{margin:0}
 body{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px;background:radial-gradient(ellipse at 50% 0%,#1c0712,#0a0408 72%);font-family:'Playfair Display',Georgia,serif;color:#ffe7c2}
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}
 .page{width:100%;max-width:720px}
-.cab{position:relative;width:100%;height:540px;overflow:hidden;border-radius:16px;border:1px solid rgba(255,210,140,.28);background:radial-gradient(ellipse at 50% 28%,#3a0a16 0%,#250712 46%,#120308 82%)}
+.ytwrap{position:absolute;left:-9999px;top:0;width:200px;height:113px;overflow:hidden;opacity:0;pointer-events:none}
+.cab{position:relative;width:100%;height:560px;overflow:hidden;border-radius:16px;border:1px solid rgba(255,210,140,.28);background:radial-gradient(ellipse at 50% 28%,#3a0a16 0%,#250712 46%,#120308 82%)}
 .spot{position:absolute;inset:0;z-index:1;transition:opacity 1.1s ease;animation:sway 6.5s ease-in-out infinite alternate}
 .spot-warm{background:radial-gradient(ellipse 280px 380px at 50% 16%,rgba(255,214,150,.55),rgba(255,168,86,.16) 42%,transparent 70%);opacity:1}
 .spot-cool{background:radial-gradient(ellipse 280px 380px at 50% 16%,rgba(150,200,255,.5),rgba(96,150,230,.15) 42%,transparent 70%);opacity:0}
-.floor{position:absolute;left:15%;width:70%;bottom:58px;height:96px;z-index:2;background:radial-gradient(ellipse at 50% 100%,rgba(255,198,120,.22),transparent 72%)}
-.heat{position:absolute;bottom:120px;width:58px;height:210px;z-index:2;pointer-events:none;background:linear-gradient(to top,rgba(255,130,70,0),rgba(255,142,84,.30),rgba(255,120,60,0));animation:rise 3.4s ease-in-out infinite;transition:opacity 1s ease}
+.floor{position:absolute;left:15%;width:70%;bottom:78px;height:96px;z-index:2;background:radial-gradient(ellipse at 50% 100%,rgba(255,198,120,.22),transparent 72%)}
+.heat{position:absolute;bottom:140px;width:58px;height:210px;z-index:2;pointer-events:none;background:linear-gradient(to top,rgba(255,130,70,0),rgba(255,142,84,.30),rgba(255,120,60,0));animation:rise 3.4s ease-in-out infinite;transition:opacity 1s ease}
 .cab.soul .heat{opacity:.07}
-.figwrap{position:absolute;left:50%;margin-left:-100px;bottom:62px;width:200px;z-index:3;transform-origin:50% 100%;animation:figsway 6s ease-in-out infinite alternate}
+.figwrap{position:absolute;left:50%;margin-left:-100px;bottom:82px;width:200px;z-index:3;transform-origin:50% 100%;animation:figsway 6s ease-in-out infinite alternate}
 .smoke{animation:smoke 4.2s ease-in-out infinite;transform-origin:bottom}
 .hearts{position:absolute;inset:0;z-index:4;overflow:hidden;pointer-events:none}
-.heart{position:absolute;bottom:64px;opacity:0;will-change:transform;animation-name:floatUp;animation-timing-function:linear;animation-fill-mode:forwards}
-.soulline{position:absolute;top:30%;width:100%;text-align:center;z-index:5;pointer-events:none;opacity:0;transition:opacity 1s ease;color:#d6ecff;text-shadow:0 0 16px rgba(110,180,255,.6)}
+.heart{position:absolute;bottom:84px;opacity:0;will-change:transform;animation-name:floatUp;animation-timing-function:linear;animation-fill-mode:forwards}
+.soulline{position:absolute;top:29%;width:100%;text-align:center;z-index:5;pointer-events:none;opacity:0;transition:opacity 1s ease;color:#d6ecff;text-shadow:0 0 16px rgba(110,180,255,.6)}
 .cab.soul .soulline{opacity:1}
 .soulline b{display:block;font-style:italic;font-weight:600;font-size:23px}
 .soulline span{display:block;font-size:14px;color:#a7ccef;margin-top:6px}
@@ -41,12 +42,20 @@ body{min-height:100vh;display:flex;align-items:center;justify-content:center;pad
 .title{position:absolute;top:16px;left:0;width:100%;text-align:center;z-index:7;pointer-events:none}
 .title b{font-style:italic;font-weight:600;font-size:30px;color:#ffe1a6;text-shadow:0 0 14px rgba(255,190,90,.55);animation:flicker 7s infinite}
 .title small{display:block;font-size:12px;letter-spacing:.06em;color:rgba(255,226,182,.6);margin-top:2px}
-.cap{position:absolute;left:8%;width:84%;bottom:66px;text-align:center;z-index:7;pointer-events:none;font-style:italic;font-size:21px;color:#ffe7c2;text-shadow:0 1px 10px rgba(0,0,0,.6);opacity:0;transition:opacity .5s ease;min-height:30px}
-.reveal{position:absolute;left:50%;transform:translateX(-50%);bottom:16px;z-index:8;cursor:pointer;font-family:'Playfair Display',Georgia,serif;font-style:italic;font-size:15px;color:#ffe7c2;background:rgba(10,3,6,.42);border:1px solid rgba(255,210,140,.5);border-radius:40px;padding:8px 18px;transition:background .25s ease,border-color .25s ease}
-.reveal:hover{background:rgba(255,210,140,.16);border-color:rgba(255,210,140,.85)}
-.ic{vertical-align:-3px;margin-right:6px}
-.credit{max-width:560px;margin:18px auto 0;text-align:center;font-size:13px;line-height:1.6;color:rgba(255,226,182,.62)}
-.credit a{color:rgba(255,226,182,.85)}
+.cap{position:absolute;left:7%;width:86%;bottom:84px;text-align:center;z-index:7;pointer-events:none;font-style:italic;font-size:21px;color:#ffe7c2;text-shadow:0 1px 10px rgba(0,0,0,.6);opacity:0;transition:opacity .5s ease;min-height:54px}
+.controls{position:absolute;left:0;right:0;bottom:16px;z-index:8;display:flex;gap:10px;justify-content:center;flex-wrap:wrap;padding:0 10px}
+.btn{cursor:pointer;font-family:'Playfair Display',Georgia,serif;font-style:italic;font-size:15px;color:#ffe7c2;background:rgba(10,3,6,.45);border:1px solid rgba(255,210,140,.5);border-radius:40px;padding:8px 16px;transition:background .25s ease,border-color .25s ease}
+.btn:hover{background:rgba(255,210,140,.16);border-color:rgba(255,210,140,.85)}
+.btn .ic{vertical-align:-3px;margin-right:6px}
+.synchint{position:absolute;left:50%;top:46%;transform:translateX(-50%);z-index:9;width:88%;max-width:520px;text-align:center;background:rgba(8,12,26,.82);border:1px solid rgba(150,200,255,.5);border-radius:14px;padding:14px 16px;color:#dcecff;display:none}
+.synchint.on{display:block}
+.synchint .nl{font-style:italic;font-size:18px;margin:6px 0 12px}
+.synchint .tap{font-style:normal;font-size:15px;background:rgba(150,200,255,.16);border-color:rgba(150,200,255,.7);color:#eaf3ff}
+.synchint small{display:block;margin-top:10px;font-size:12px;color:#9fb6d8}
+.expired{padding:80px 24px;text-align:center;font-style:italic;font-size:22px;color:#ffe1a6}
+.credit{max-width:580px;margin:18px auto 0;text-align:center;font-size:13px;line-height:1.7;color:rgba(255,226,182,.62)}
+.credit a{color:rgba(255,226,182,.85);cursor:pointer}
+.credit .tools{margin-top:6px;font-size:12px;color:rgba(255,226,182,.5)}
 @keyframes openL{to{transform:translateX(-78%)}}
 @keyframes openR{to{transform:translateX(78%)}}
 @keyframes sway{from{transform:translateX(-10px)}to{transform:translateX(10px)}}
@@ -56,13 +65,14 @@ body{min-height:100vh;display:flex;align-items:center;justify-content:center;pad
 @keyframes twinkle{0%,100%{opacity:1;box-shadow:0 0 9px 2px rgba(255,205,120,.85)}50%{opacity:.32;box-shadow:0 0 4px 1px rgba(255,205,120,.35)}}
 @keyframes flicker{0%,88%,100%{opacity:1}90%{opacity:.55}92%{opacity:1}95%{opacity:.72}97%{opacity:1}}
 @keyframes floatUp{0%{transform:translate(0,0) rotate(0);opacity:0}12%{opacity:.95}100%{transform:translate(var(--dx),-470px) rotate(var(--rot));opacity:0}}
-@media (max-width:520px){.cab{height:470px}.title b{font-size:24px}.cap{font-size:18px}}
+@media (max-width:520px){.cab{height:520px}.title b{font-size:24px}.cap{font-size:18px}}
 @media (prefers-reduced-motion: reduce){.spot,.figwrap,.heat,.bulb,.smoke,.title b,.curt{animation:none!important}.curt.l{transform:translateX(-78%)}.curt.r{transform:translateX(78%)}}
 </style>
 </head>
 <body>
-<main class="page">
-<h1 class="sr-only">Bo we mnie jest seks by Jeremi Przybora — an animated cabaret stage with an English translation. A spotlit diva silhouette sways while hearts drift upward, some broken, and the lyrics scroll by. A button reveals the song's hidden line about a soul beneath the sex.</h1>
+<main class="page" id="page">
+<h1 class="sr-only">Bo we mnie jest seks by Jeremi Przybora — an animated cabaret stage that plays the original recording and shows a singable English translation synced to the music. Press play; a button reveals the song's hidden line about a soul beneath the sex.</h1>
+<div class="ytwrap"><div id="yt"></div></div>
 <div class="cab" id="cab">
   <div class="spot spot-warm"></div>
   <div class="spot spot-cool"></div>
@@ -98,21 +108,44 @@ body{min-height:100vh;display:flex;align-items:center;justify-content:center;pad
   <div class="mq" id="mq"></div>
   <div class="title"><b>Bo we mnie jest seks</b><small>Jeremi Przybora · Kabaret Starszych Panów</small></div>
   <div class="cap" id="cap"></div>
-  <button class="reveal" id="reveal" aria-label="Reveal the hidden soul of the song"><svg class="ic" viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M12 2l1.6 5.4L19 9l-5.4 1.6L12 16l-1.6-5.4L5 9z"/><circle cx="18.5" cy="17.5" r="1.5"/></svg>reveal the soul</button>
+  <div class="synchint" id="synchint">
+    <div>Play the song, then tap exactly as each line begins:</div>
+    <div class="nl" id="syncnext">—</div>
+    <button class="btn tap" id="synctap">tap ⎵ to mark this line</button>
+    <small id="syncprog">line 1 of 19 · press Esc to cancel</small>
+  </div>
+  <div class="controls">
+    <button class="btn" id="playpause" aria-label="Play or pause the music"></button>
+    <button class="btn" id="reveal" aria-label="Reveal the hidden soul of the song"></button>
+  </div>
 </div>
-<p class="credit">Words by Jeremi Przybora · music by Jerzy Wasowski · made immortal by Kalina Jędrusik in <i>Kabaret Starszych Panów</i>. This animation and the English translation are an affectionate fan tribute — original lyrics remain © their rights holders.</p>
+<p class="credit">Words by Jeremi Przybora · music by Jerzy Wasowski · sung by Kalina Jędrusik (<i>Kabaret Starszych Panów</i>). Audio: <a id="ytlink">official recording on YouTube</a> (Polskie Nagrania). Animation + English translation are an affectionate fan tribute; lyrics © their rights holders.
+<span class="tools"><a id="syncbtn">fine-tune lyric sync</a> · <a id="resetsync">reset sync</a></span></p>
 </main>
 <script>
 (function(){
+  var EXP=1781529544000;
+  var page=document.getElementById('page');
+  function expired(){return Date.now()>EXP;}
+  if(expired()){page.innerHTML='<div class="expired">The 48-hour curtain has fallen — this little joke has gently expired.</div>';return;}
+  setInterval(function(){if(expired()){page.innerHTML='<div class="expired">The 48-hour curtain has fallen — this little joke has gently expired.</div>';}},60000);
+
   var cab=document.getElementById('cab');
   var mq=document.getElementById('mq');
   var hearts=document.getElementById('hearts');
   var cap=document.getElementById('cap');
-  var btn=document.getElementById('reveal');
+  var reveal=document.getElementById('reveal');
+  var playpause=document.getElementById('playpause');
   var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function openLink(u){window.open(u,'_blank','noopener');}
+  document.getElementById('ytlink').onclick=function(){openLink('https://www.youtube.com/watch?v=zSaT0-9mj0w');};
 
   var SP='<svg class="ic" viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M12 2l1.6 5.4L19 9l-5.4 1.6L12 16l-1.6-5.4L5 9z"/><circle cx="18.5" cy="17.5" r="1.5"/></svg>';
   var FL='<svg class="ic" viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M13 2c.6 3.2-2.2 4.2-2.2 7.2a2.2 2.2 0 004.3.4c1.6 1.4 2.6 3.3 2.6 5.4a5.7 5.7 0 01-11.4 0c0-2.8 1.7-5 2.9-6.4C11 6.6 12.2 5 13 2z"/></svg>';
+  var PLAY='<svg class="ic" viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M7 4l13 8-13 8z"/></svg>';
+  var PAUSE='<svg class="ic" viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>';
+  reveal.innerHTML=SP+'reveal the soul';
+  playpause.innerHTML=PLAY+'play the music';
 
   var idx=0;
   for(var k=0;k<16;k++){ b((5+k*6)+'%','9px',idx++);}
@@ -139,33 +172,110 @@ body{min-height:100vh;display:flex;align-items:center;justify-content:center;pad
   }
   if(!reduce){ heart(); setInterval(heart,640); }
 
-  var lines=[
-    "Because there's sex in me…",
-    "hot as a desert wind —",
-    "and who alive could withstand it?",
-    "It lays so many hearts to waste —",
-    "whoever looks my way leaves wounded.",
-    "And yet, beneath the sex…",
-    "there's a soul in here as well.",
-    "Only nobody ever guesses it's there.",
-    "How I'd love, just once,",
-    "for someone to long for my soul",
-    "as warmly as he longs for my body.",
-    "Because there's sex in me…"
+  var CUES=[
+    [9,'heat',"There's sex, yes, in me — as hot as the sand-wind,"],
+    [15,'heat',"there's sex, yes, in me — now who could withstand it?"],
+    [22,'heat',"There's sex, yes, in me, and oh, how it wounds them;"],
+    [28,'heat',"whoever once looks goes reeling, undone."],
+    [36,'heat',"And yet — beneath all this heat and this fire,"],
+    [42,'soul',"there's a soul of my own that no one will admire."],
+    [49,'soul',"For nobody dreams, underneath the allure,"],
+    [55,'soul',"a heart and a mind lie aching, unsure."],
+    [63,'soul',"How dearly I'd love — just once — to discover"],
+    [69,'soul',"a man who would cherish my soul like a lover,"],
+    [76,'soul',"who'd long for the self that I hide and I smother"],
+    [82,'soul',"as much as he longs for the rest, like the other."],
+    [90,'heat',"So why am I cursed with this fevered sensation,"],
+    [96,'heat',"tormenting us all — the whole population?"],
+    [104,'heat',"One glance, and they fall; one step, and they quiver —"],
+    [110,'heat',"I carry this fire like a stone in the river."],
+    [118,'heat',"There's sex, yes, in me…"],
+    [124,'soul',"and still — I would give the whole of it over:"],
+    [130,'soul',"both body and soul, to one worthy lover."]
   ];
-  var li=0;
-  function tick(){
-    cap.style.opacity=0;
-    setTimeout(function(){cap.textContent=lines[li%lines.length];cap.style.opacity=1;li++;},500);
-  }
-  setTimeout(tick,1300);
-  setInterval(tick,3800);
+  var times=CUES.map(function(c){return c[0];});
+  try{var saved=JSON.parse(localStorage.getItem('cab_sync_v1'));if(saved&&saved.length===CUES.length){times=saved;}}catch(e){}
 
-  btn.addEventListener('click',function(){
-    cab.classList.toggle('soul');
-    var on=cab.classList.contains('soul');
-    btn.innerHTML=(on?FL+'back to the heat':SP+'reveal the soul');
+  function setMode(m){ if(m==='soul'){cab.classList.add('soul');}else{cab.classList.remove('soul');} }
+  var curCue=-1;
+  function showCue(i){
+    if(i===curCue)return;
+    curCue=i;
+    cap.style.opacity=0;
+    setTimeout(function(){
+      cap.textContent=(i<0)?'':CUES[i][2];
+      cap.style.opacity=1;
+      if(i>=0)setMode(CUES[i][1]);
+    },220);
+  }
+  function indexFor(ct){var r=-1;for(var i=0;i<times.length;i++){if(ct>=times[i])r=i;else break;}return r;}
+
+  var autoTimer=null,ai=0;
+  function startAuto(){ stopAuto(); ai=0; showCue(0); autoTimer=setInterval(function(){ai=(ai+1)%CUES.length;showCue(ai);},3600); }
+  function stopAuto(){ if(autoTimer){clearInterval(autoTimer);autoTimer=null;} }
+
+  var syncTimer=null;
+  function startSync(){ stopAuto(); if(syncTimer)return; syncTimer=setInterval(function(){ if(player&&player.getCurrentTime){var i=indexFor(player.getCurrentTime());if(i!==curCue)showCue(i);} },200); }
+  function stopSync(){ if(syncTimer){clearInterval(syncTimer);syncTimer=null;} }
+
+  var player=null,playerReady=false;
+  window.onYouTubeIframeAPIReady=function(){
+    player=new YT.Player('yt',{videoId:'zSaT0-9mj0w',playerVars:{playsinline:1,rel:0,modestbranding:1,controls:0},events:{
+      onReady:function(){playerReady=true;},
+      onStateChange:function(e){
+        if(e.data===1){playpause.innerHTML=PAUSE+'pause';startSync();}
+        else if(e.data===2){playpause.innerHTML=PLAY+'play';}
+        else if(e.data===0){playpause.innerHTML=PLAY+'play again';stopSync();}
+      },
+      onError:function(){playpause.innerHTML=PLAY+'play on YouTube';playerReady=false;}
+    }});
+  };
+  var t=document.createElement('script');t.src='https://www.youtube.com/iframe_api';document.head.appendChild(t);
+
+  playpause.onclick=function(){
+    if(!playerReady||!player){openLink('https://www.youtube.com/watch?v=zSaT0-9mj0w');return;}
+    var st=player.getPlayerState();
+    if(st===1){player.pauseVideo();}else{player.playVideo();}
+  };
+  reveal.onclick=function(){
+    var on=!cab.classList.contains('soul');
+    setMode(on?'soul':'heat');
+    reveal.innerHTML=(on?FL+'back to the heat':SP+'reveal the soul');
+  };
+
+  var hint=document.getElementById('synchint');
+  var syncNext=document.getElementById('syncnext');
+  var syncProg=document.getElementById('syncprog');
+  var calibrating=false,tapIdx=0,draft=[];
+  function enterSync(){
+    if(!playerReady){openLink('https://www.youtube.com/watch?v=zSaT0-9mj0w');return;}
+    stopAuto();stopSync();calibrating=true;tapIdx=0;draft=[];
+    hint.classList.add('on');updateHint();
+    if(player.getPlayerState()!==1)player.playVideo();
+  }
+  function updateHint(){syncNext.textContent=CUES[tapIdx][2];syncProg.textContent='line '+(tapIdx+1)+' of '+CUES.length+' · press Esc to cancel';}
+  function mark(){
+    if(!calibrating)return;
+    draft[tapIdx]=Math.max(0,player.getCurrentTime());
+    cap.textContent=CUES[tapIdx][2];cap.style.opacity=1;setMode(CUES[tapIdx][1]);
+    tapIdx++;
+    if(tapIdx>=CUES.length){finishSync();}else{updateHint();}
+  }
+  function finishSync(){
+    for(var i=1;i<draft.length;i++){if(draft[i]<=draft[i-1])draft[i]=draft[i-1]+0.4;}
+    times=draft.slice();
+    try{localStorage.setItem('cab_sync_v1',JSON.stringify(times));}catch(e){}
+    calibrating=false;hint.classList.remove('on');curCue=-1;startSync();
+  }
+  function cancelSync(){calibrating=false;hint.classList.remove('on');curCue=-1;startSync();}
+  document.getElementById('synctap').onclick=mark;
+  document.getElementById('syncbtn').onclick=function(){enterSync();};
+  document.getElementById('resetsync').onclick=function(){try{localStorage.removeItem('cab_sync_v1');}catch(e){}times=CUES.map(function(c){return c[0];});curCue=-1;};
+  document.addEventListener('keydown',function(ev){
+    if(calibrating){if(ev.code==='Space'){ev.preventDefault();mark();}else if(ev.code==='Escape'){cancelSync();}}
   });
+
+  startAuto();
 })();
 </script>
 </body>
